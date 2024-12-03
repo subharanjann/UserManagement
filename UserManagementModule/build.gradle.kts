@@ -61,10 +61,6 @@ dependencies {
     implementation ("androidx.lifecycle:lifecycle-runtime-compose:2.6.0")
     implementation ("androidx.activity:activity-compose:1.8.0")
 
-    //lottie
-    implementation("com.airbnb.android:lottie:6.4.0")
-    implementation("com.airbnb.android:lottie-compose:4.0.0")
-
     //retro
     implementation("com.squareup.retrofit2:retrofit:2.10.0")
     implementation("com.squareup.retrofit2:converter-gson:2.10.0")
@@ -79,4 +75,5 @@ dependencies {
 
     //extra
     implementation("com.github.subharanjann:locpostingpackage:1.0.0")
+    implementation("com.github.subharanjann:scanbinmodule:1.0.1")
 }

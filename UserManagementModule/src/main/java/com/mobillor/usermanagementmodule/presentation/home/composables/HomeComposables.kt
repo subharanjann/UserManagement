@@ -44,6 +44,7 @@ import com.mobillor.usermanagementmodule.presentation.commonComposables.ui.theme
 import com.mobillor.usermanagementmodule.presentation.commonComposables.ui.theme.white
 import com.gimble.segmk3.presentation.home.composables.PicklistComposableButton
 import com.mobillor.locpostingmodule.presentation.activity.LocPostingStarterActivity
+import com.mobillor.scanbinmodule.presentation.activity.ScanBinStarterActivity
 import com.mobillor.usermanagementmodule.R
 import com.mobillor.usermanagementmodule.presentation.home.viewmodel.UserManagementViewModel
 import com.mobillor.usermanagementmodule.util.AppConstants
@@ -208,8 +209,12 @@ fun ScannersSection(viewModel: UserManagementViewModel, context: Context) {
 //                        context.startActivity(intent)
                     }
                     "Scan Bin" -> PicklistComposableButton("Scan Bin", R.drawable.boxx) {
-//                        val intent = Intent(context, ScanBinJetComposeActivity::class.java)
-//                        context.startActivity(intent)
+                        val i = Intent(context,ScanBinStarterActivity::class.java)
+                        i.putExtra("baseURL", "https://swms.mobillor.net/api/api/api/swms/")
+                        i.putExtra("userId", "ca5c8f1b-5f19-4fe9-851d-f7950a1f9169")
+                        i.putExtra("userToken", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Im5hbWUiOiJNYWRodSAoUGxhbm5lcikiLCJlbWFpbCI6Im1hZGh1c3VkaGFuLmxAbW9iaWxsb3IubmV0Iiwicm9sZUlkIjoiMjNmZDlmNjEtNTRlNS00ZTRmLWI4NWMtMWRhZGZkYzhmOGVlIiwidXVpZCI6Ijc0NTY1NmZiMmNjY2I2YTQifSwiaWF0IjoxNzMwOTc5ODcyLCJleHAiOjE3MzEwMjMwNzJ9.lPmJAz4J451CnGGIat0T72zSxFXhUoTK67L8imHhucA")
+
+                        context.startActivity(i)
                     }
                 }
             }
